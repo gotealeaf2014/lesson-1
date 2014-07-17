@@ -13,10 +13,10 @@ player = {}
 dealer = {}
 players = {"player" => "", "dealer" => ""}
 
-clubs = { "clubs_ace" =>10, "clubs_2" => 2, "clubs_3" => 3, "clubs_4" => 4, "clubs_5" => 5, "clubs_6" =>6, "clubs_7" => 7, "clubs_8" => 8, "clubs_9" =>9, "clubs_10" => 10, "clubs_jack" => 10, "clubs_queen" => 10, "clubs_king" =>10}
-diamonds = { "diamonds_ace" =>10, "diamonds_2" => 2, "diamonds_3" => 3, "diamonds_4" => 4, "diamonds_5" => 5, "diamonds_6" =>6, "diamonds_7" => 7, "diamonds_8" => 8, "diamonds_9" =>9, "diamonds_10" => 10, "diamonds_jack" => 10, "diamonds_queen" => 10, "diamonds_king" =>10}
-hearts = { "hearts_ace" =>10, "hearts_2" => 2, "hearts_3" => 3, "hearts_4" => 4, "hearts_5" => 5, "hearts_6" =>6, "hearts_7" => 7, "hearts_8" => 8, "hearts_9" =>9, "hearts_10" => 10, "hearts_jack" => 10, "hearts_queen" => 10, "hearts_king" =>10}
-spades = { "spades_ace" =>10, "spades_2" => 2, "spades_3" => 3, "spades_4" => 4, "spades_5" => 5, "spades_6" =>6, "spades_7" => 7, "spades_8" => 8, "spades_9" =>9, "spades_10" => 10, "spades_jack" => 10, "spades_queen" => 10, "spades_king" =>10}
+clubs = { "clubs_ace" =>11, "clubs_2" => 2, "clubs_3" => 3, "clubs_4" => 4, "clubs_5" => 5, "clubs_6" =>6, "clubs_7" => 7, "clubs_8" => 8, "clubs_9" =>9, "clubs_10" => 10, "clubs_jack" => 10, "clubs_queen" => 10, "clubs_king" =>10}
+diamonds = { "diamonds_ace" =>11, "diamonds_2" => 2, "diamonds_3" => 3, "diamonds_4" => 4, "diamonds_5" => 5, "diamonds_6" =>6, "diamonds_7" => 7, "diamonds_8" => 8, "diamonds_9" =>9, "diamonds_10" => 10, "diamonds_jack" => 10, "diamonds_queen" => 10, "diamonds_king" =>10}
+hearts = { "hearts_ace" =>11, "hearts_2" => 2, "hearts_3" => 3, "hearts_4" => 4, "hearts_5" => 5, "hearts_6" =>6, "hearts_7" => 7, "hearts_8" => 8, "hearts_9" =>9, "hearts_10" => 10, "hearts_jack" => 10, "hearts_queen" => 10, "hearts_king" =>10}
+spades = { "spades_ace" =>11, "spades_2" => 2, "spades_3" => 3, "spades_4" => 4, "spades_5" => 5, "spades_6" =>6, "spades_7" => 7, "spades_8" => 8, "spades_9" =>9, "spades_10" => 10, "spades_jack" => 10, "spades_queen" => 10, "spades_king" =>10}
 
 deck = clubs.merge(diamonds).merge(hearts).merge(spades)
 
