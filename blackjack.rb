@@ -27,8 +27,8 @@ def deal(card, hand)
 end
 
 def start_game(start, player, dealer, players)
-	2.times { deal(start, player) }
-	2.times { deal(start, dealer) }
+  2.times { deal(start, player) }
+  2.times { deal(start, dealer) }
   puts "Player hand: #{player.keys}"
   eval_hand(player, players, "player")
   check_winner(players)
@@ -65,7 +65,7 @@ def dealer_turn(card, hand, players)
     players["dealer"] = "stay"
   elsif hand.values.inject(:+) == 21
     players["dealer"] = "blackjack"
-elsif hand.values.inject(:+) > 21
+  elsif hand.values.inject(:+) > 21
     players["dealer"] = "bust"
   end
 end
@@ -79,33 +79,33 @@ def check_winner(players)
 end
 
 def compare_values(players, player, dealer)
-    hands = {"player" => player.values.inject(:+), "dealer" => dealer.values.inject(:+)}
-    max = [player.values.inject(:+), dealer.values.inject(:+)].max
-    puts "#{hands.invert[max]} wins!"
+  hands = {"player" => player.values.inject(:+), "dealer" => dealer.values.inject(:+)}
+  max = [player.values.inject(:+), dealer.values.inject(:+)].max
+  puts "#{hands.invert[max]} wins!"
 end
 
 start_game(deck, player, dealer, players)
-#player = {"spades_queen" => 10, "clubs_ace" => 10, "clubs_two" => 2}
 
 #until check_winner(player)
 until players["player"] != ""
   puts "Hit or Stay?"
   choice = gets.chomp.downcase
-    if choice == "hit"
-      deal(deck, player)
-      puts "Players hand: #{player.keys}"
-      aces(player)
+  if choice == "hit"
+    deal(deck, player)
+    puts "Players hand: #{player.keys}"
+    aces(player)
 #      puts player.values.inject(:+)
-      eval_hand(player, players, "player")
-      check_winner(players)
-    elsif choice == "stay"
-      players["player"] = "stay"
-    end
+    eval_hand(player, players, "player")
+    check_winner(players)
+  elsif choice == "stay"
+    players["player"] = "stay"
+  end
 end
-    dealer_turn(deck, dealer, players)
+
+dealer_turn(deck, dealer, players)
 
 if players["dealer"] = "stay" && players["player"] == "stay"
-    puts "Player hand: #{player.keys}"
-    puts "Dealer hand: #{dealer.keys}"
-    compare_values(players, player, dealer)
+  puts "Player hand: #{player.keys}"
+  puts "Dealer hand: #{dealer.keys}"
+  compare_values(players, player, dealer)
 end
